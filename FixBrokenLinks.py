@@ -8,12 +8,12 @@ import arcpy,pprint
 ##    pprint.pprint(dict2Print)
 
 aprx = arcpy.mp.ArcGISProject(
-    r"C:\LPA\Projects\DataSourceProject\DataSourceProject.aprx")
+    r"projects path to aprx")
 ##mapx = aprx.listMaps("Basemap")[0]
 ##print_source("Countries")
 ##
 ##lyr = mapx.listLayers("Countries")[0]
-##defaultGDB = r"C:\LPA\Projects\DataSourceProject\DataSourceProject.gdb"
+##defaultGDB = r"path to db"
 ### lyr.dataSource = r"{0}\Countries_African".format(defaultGDB)
 ##origConnPropDict = lyr.connectionProperties
 ##print_dict(origConnPropDict)
@@ -25,7 +25,7 @@ aprx = arcpy.mp.ArcGISProject(
 ##mapx.updateConnectionProperties("test.gdb","test2.gdb")
 ##print_source("Countries")
 ##print_source("Places")
-aprx.updateConnectionProperties("test2.gdb",r"Temp2\test3.gdb")
+aprx.updateConnectionProperties("test2.gdb",r"path to db")
 aprx.save()
 
 del aprx
